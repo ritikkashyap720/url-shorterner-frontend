@@ -35,7 +35,7 @@ function Admin() {
 
   async function LoadAllUrl(token) {
     if (token) {
-      const response = await axios.get("http://localhost:8000/url/allUserUrl", {
+      const response = await axios.get(`${BACKEND_URL}/url/allUserUrl`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -51,7 +51,7 @@ function Admin() {
   }
 
   async function deleteURL(urlID) {
-    const response = await axios.delete(`http://localhost:8000/url/deleteUrl/${urlID}`,
+    const response = await axios.delete(`${BACKEND_URL}/${urlID}`,
       {
         headers: {
           'Authorization': `Bearer ${token}`
