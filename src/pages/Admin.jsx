@@ -51,7 +51,7 @@ function Admin() {
   }
 
   async function deleteURL(urlID) {
-    const response = await axios.delete(`${BACKEND_URL}/${urlID}`,
+    const response = await axios.delete(`${BACKEND_URL}/url/deleteUrl/${urlID}`,
       {
         headers: {
           'Authorization': `Bearer ${token}`
