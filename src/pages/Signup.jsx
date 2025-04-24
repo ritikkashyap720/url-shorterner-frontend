@@ -32,7 +32,7 @@ function Signup() {
         const name = formRef.current.name.value
         const email = formRef.current.email.value
         const password = formRef.current.password.value
-        const response = await axios.post("http://localhost:8000/user/signin", { email, password,name })
+        const response = await axios.post(`${BACKEND_URL}/user/signin`, { email, password,name })
 
         if (response.data.token) {
             localStorage.setItem("token", response.data.token)
